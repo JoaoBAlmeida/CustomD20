@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomD20.Pages.MainPage"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="White"
+             Title="Welcome to CustomD20">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BorderColor="Black" BackgroundColor="White" Padding="5">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Qual sua pontuação atual?"/>
+                    <Picker x:Name="PkrValue" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Preparado para a sorte?"/>
+                    <Button CornerRadius="10" BorderColor="Black" Text="Roll Dice" TextColor="Black" Clicked="BtnLucky"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+    </ContentPage.Content>
+</ContentPage>
